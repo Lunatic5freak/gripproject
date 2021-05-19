@@ -1,0 +1,21 @@
+<%layout('./layouts/layouts.ejs')%>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>From</td>
+            <td>To</td>
+            <td>Transfer Date</td>
+            <td>Transfer Amount</td>
+        </tr>
+    </thead>
+    <tbody>
+        <%transactions.forEach(i=>{%>
+            <tr>
+                <td><%=i.from_customer%></td>
+                <td><%=i.to_customer%></td>
+                <td><%=i.transfer_date%></td>
+                <td><%=i.transfer_amount%></td>
+            </tr>
+        <%});%>
+    </tbody>
+</table>

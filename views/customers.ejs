@@ -1,0 +1,21 @@
+<% layout('./layouts/layouts.ejs') %>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>name</td>
+            <td>email</td>
+            <td>balance</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <%users.forEach(i=>{%>
+            <tr>
+                <td><%=i.name %></td>
+                <td><%=i.email %></td>
+                <td><%=i.balance %></td>
+                <td><a href="/api/user/<%=i.email%>">View</a></td>
+            </tr>
+        <%});%>
+    </tbody>
+</table>
