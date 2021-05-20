@@ -44,7 +44,7 @@ exports.doTransaction=async (req,res)=>{
         transfer_amount:amt
     })
     await transact.save();
-    res.render('response',{msg:'Transaction sucessfully'});
+    res.render('response',{msg:'Transaction sucessfull'});
     } else{
         res.render('response',{msg:'some error occured!please use correct credentials'})
     }
